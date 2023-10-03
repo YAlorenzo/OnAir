@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  scroll-behavior: smooth;
+}
+
+body{
+  font-family: 'Ubuntu', sans-serif;
+  background-color: #191919;
+}
+input {
+  border: none;
+  outline: none;
+}
+.fix-container{
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 15px;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+.menuOpen{
+  position: absolute;
+  animation: fadeIn 0.3s ease-in-out;
+}
+.menuClose{
+  display: none;
+  animation: fadeOut 0.3s ease-in-out;
+}
+
+@media screen and (min-width: 640px){
+  .heroBackGround {
+      background-image: url('./assets/heroImg.png');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .bg-moviePage{
+      background-image: url('./assets/bg.png');
+      background-repeat: repeat;
+      background-position: center;
+      background-size: cover;
+    }
+}
+.animate_arrow {
+  transform: translateX(0);
+}
+.start_animate_arrow:hover+.animate_arrow {
+  transform: translateX(30px);
+}
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Цвет фона полосы прокрутки */
+::-webkit-scrollbar-track {
+  background: rgba(241, 241, 241, 0.1);
+}
+
+/* Цвет "бегунка" (перемещаемой части) */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+.mutating-dots-loading{
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100px;
+  height: 100px;
+}
+.active {
+  background-color: #E13C52;
+}

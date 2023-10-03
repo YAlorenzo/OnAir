@@ -1,0 +1,22 @@
+
+export const selectPopularMovies = (state) => state.movies.popularMovies;
+export const selectPopularSeries = (state) => state.movies.popularSeries;
+export const selectNewMovies = (state) => state.movies.newMovies;
+export const selectNewSeries = (state) => state.movies.newSeries;
+export const selectMovieById = (state) => state.movies.movieById;
+export const selectSeriesById = (state) => state.movies.serieById;
+export const selectMovieReviewsById = (state) => state.movies.movieReviews;
+export const selectSerieReviewsById = (state) => state.movies.serieReviews;
+export const selectSearchMulti = (state) => state.movies.searchMulti;
+export const selectSearchTotalPage = (state) => state.movies.searchTotalPage;
+export const selectSearchCurrentPage = (state) => state.movies.searchCurrentPage;
+export const selectGenersMovies = (state) => state.movies.moviesGeners;
+export const selectMoviesFilter = (state) => state.movies.moviesFilter;
+export const selectMoviesFilterTotalPage = (state) => state.movies.moviesFilterTotalPage;
+export const selectMoviesFilterCurrentPage = (state) => state.movies.moviesFilterCurrentPage;
+export const selectMoviesFilterCurrentGenre = (state) => state.movies.moviesFilterCurrentGenre;
+export const selectGenersSeries = (state) => state.movies.seriesGeners;
+export const selectSeriesFilter = (state) => state.movies.seriesFilter;
+export const selectSeriesFilterTotalPage = (state) => state.movies.seriesFilterTotalPage;
+export const selectSeriesFilterCurrentPage = (state) => state.movies.seriesFilterCurrentPage;
+export const selectSeriesFilterCurrentGanre = (state) => state.movies.seriesFilterCurrentGenre;
