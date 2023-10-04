@@ -17,6 +17,16 @@ function Header() {
   const handelChangeInput = (evnt) => {
     setSearchValue(evnt.target.value);
   }
+  const handelClickEnter = (evnt) => {
+    if (evnt.key === 'Enter') {
+      const searchParams = {
+      query: searchValue,
+      page: 1
+    }
+    dispatch(fetchSearchMulti(searchParams));
+    navigate(`/search/multi/${searchValue}`);
+    }
+  }
   const handelClickSearch = () => {
    
     const searchParams = {
@@ -47,7 +57,8 @@ function Header() {
           </ul>
           <div className="w-80 rounded-lg flex items-center gap-2 bg-black bg-opacity-30 h-full pl-4">
             <img src={search} alt="search" width={20} height={20} onClick={handelClickSearch} />
-            <input type="text" placeholder="Search" className="bg-transparent text-white text-lg" onChange={handelChangeInput}/>
+              <input type="text" placeholder="Search" className="bg-transparent text-white text-lg"
+                onChange={handelChangeInput} onKeyDown={handelClickEnter} />
           </div>
           </div>
           {stateMobileMenu ? (

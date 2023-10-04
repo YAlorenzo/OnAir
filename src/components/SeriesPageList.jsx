@@ -13,9 +13,9 @@ function SeriesPageList() {
     const baseUrl = "https://image.tmdb.org/t/p/original";
   return (
       <div className="fix-container">
-          <ul className="flex flex-wrap justify-center mt-10 items-center sm:justify-start sm:items-start gap-2 max-xsm:gap-6 sm:gap-5">
+          <ul className="flex flex-wrap justify-center mt-10 items-center sm:justify-start sm:items-start gap-2 sm:gap-5">
               {series.map((elem) => (
-                 <li key={elem.id} className="w-28 max-xsm:w-56 hover:scale-110 transition-transform cursor-pointer sm:w-52">
+                 <li key={elem.id} className="w-28 hover:scale-110 transition-transform cursor-pointer sm:w-52">
                       <Link to={`/series/${elem.id}`}>
                         <img src={elem.poster_path ? `${baseUrl}${elem.poster_path}` : noPoster} alt="poster" className="w-full"/>
                       </Link>  

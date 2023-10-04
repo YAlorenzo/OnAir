@@ -1,7 +1,9 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
-const API_KEY = import.meta.env.VITE_TMDB_API_KEY;
+// eslint-disable-next-line no-undef
+const API_KEY = import.meta.env.VITE_TMDB_API_KEY || process.env.VITE_TMDB_API_KEY;
+
 
 const baseUrl = "https://api.themoviedb.org/3";
 
