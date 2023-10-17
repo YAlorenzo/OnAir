@@ -55,11 +55,11 @@ function MoviesList({ label, category }) {
 
         <img src={arrow} alt="arrow" width={10} height={10} className="animate_arrow transition-transform"/>
       </div>
-      <ul className='flex flex-wrap justify-center items-center sm:justify-start sm:items-start gap-2 sm:gap-5'>
+      <ul className='flex max-sm:flex-wrap justify-center items-center sm:justify-start sm:items-start gap-2 sm:gap-5'>
         {
           category === 'PS' || category === 'NS' ? 
           moviesList.map((elem) => (
-               <li key={elem.id} className='w-28 hover:scale-110 transition-transform cursor-pointer sm:w-52'>
+               <li key={elem.id} className='w-28 hover:scale-110 transition-transform cursor-pointer sm:w-1/6'>
               <Link to={`/series/${elem.id}`}>
              
                   <img src={elem.poster_path ? `${baseUrl}${elem.poster_path}` : `${noPoster}`} alt="pposter" className='w-full block' />
@@ -69,7 +69,7 @@ function MoviesList({ label, category }) {
           )) 
             :
             moviesList.map((elem) => (
-                <li key={elem.id} className='w-28 hover:scale-110 transition-transform cursor-pointer sm:w-52'>
+                <li key={elem.id} className='w-28 hover:scale-110 transition-transform cursor-pointer sm:w-1/6'>
                   <Link to={`/movies/${elem.id}`}>
                      <img src={`${baseUrl}${elem.poster_path}`} alt="poster" className='w-full block' />
                   </Link>

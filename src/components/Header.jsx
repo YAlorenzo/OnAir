@@ -15,7 +15,8 @@ function Header() {
 
 
   const handelChangeInput = (evnt) => {
-    setSearchValue(evnt.target.value);
+      setSearchValue(evnt.target.value);    
+    console.log(searchValue);
   }
   const handelClickEnter = (evnt) => {
     if (evnt.key === 'Enter') {
@@ -23,8 +24,10 @@ function Header() {
       query: searchValue,
       page: 1
     }
-    dispatch(fetchSearchMulti(searchParams));
-    navigate(`/search/multi/${searchValue}`);
+      dispatch(fetchSearchMulti(searchParams));
+      if (searchValue.trim().length !== 0) {
+      navigate(`/search/multi/${searchValue}`);
+    }  
     }
   }
   const handelClickSearch = () => {
@@ -34,7 +37,10 @@ function Header() {
       page: 1
     }
     dispatch(fetchSearchMulti(searchParams));
-    navigate(`/search/multi/${searchValue}`);
+   dispatch(fetchSearchMulti(searchParams));
+      if (searchValue.trim().length !== 0) {
+      navigate(`/search/multi/${searchValue}`);
+    } 
   }
   return (
     <>
