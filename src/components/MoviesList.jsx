@@ -55,7 +55,7 @@ function MoviesList({ label, category }) {
 
         <img src={arrow} alt="arrow" width={10} height={10} className="animate_arrow transition-transform"/>
       </div>
-      <ul className='flex max-sm:flex-wrap justify-center items-center sm:justify-start sm:items-start gap-2 sm:gap-5'>
+      <ul className= {`flex max-sm:flex-wrap justify-center ${showAll && 'flex-wrap justify-center sm:items-center sm:justify-center'} items-center sm:justify-start sm:items-start gap-2 sm:gap-5`} >
         {
           category === 'PS' || category === 'NS' ? 
           moviesList.map((elem) => (
