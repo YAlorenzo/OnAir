@@ -15,9 +15,9 @@ function Header() {
 
 
   const handelChangeInput = (evnt) => {
-      setSearchValue(evnt.target.value);    
-    console.log(searchValue);
+      setSearchValue(evnt.target.value.trim());    
   }
+  
   const handelClickEnter = (evnt) => {
     if (evnt.key === 'Enter') {
       const searchParams = {
