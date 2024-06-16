@@ -1,25 +1,27 @@
-# OnAir
+# 🎬 OnAir
 
-This project is my pet project created to showcase my skills and experience. fantastic application for searching for movies and TV shows with various features that allow you to find and learn more about your favorite content.
+## Description
+OnAir is an online platform that simulates a cinema experience where users can search for movies by title, sort them by categories, and explore three main sections: Movies, TV Shows, and Series. While users cannot watch movies directly on the platform, they can access detailed information about each film, including ratings, trailers, descriptions, cast information, and user reviews.
 
-## Key Features
+## Features
+- **Movie Search**: Find any movie by its title.
+- **Category Filters**: Sort movies by various categories.
+- **Sections**: Navigate through the tabs "Movies," "Series," and "TV Shows."
+- **Responsive Design**: Fully responsive layout.
+- **Movie Details**: View ratings, trailers, descriptions, and cast information.
+- **User Reviews**: Write and read reviews for movies.
+- **Pagination**: Efficient navigation through multiple pages of content.
+- **User Profiles**: View profiles of comment authors.
 
-- Search for movies and TV shows by title or genre.
-- View information about movies and TV shows, including user comments.
-- Filter content by genre.
-- Browse movies and series with pagination.
-- Navigate to a service to leave comments and view the profile of the comment author.
+## Tech Stack
+- **Frontend**: React
+- **Build Tool**: Vite
+- **Styling**: Tailwind CSS, Material UI
+- **State Management**: Redux Toolkit
+- **API**: TMDB (The Movie Database) - a free, open movie database API
 
-## Technologies
-
-- React.js: The primary library for building the user interface.
-- Tailwind CSS and Material UI: Libraries for styling the application.
-- Redux Toolkit: A tool for managing the application's state.
-- React-Router-Dom: Routing within the application.
-- TMDB: The database from which movie and TV show data, as well as user comments, are retrieved.
-- Project built with Vite: A fast and modern build system.
-
-
+## Purpose
+The primary goal of this project was to practice working with APIs, including fetching and processing data, as well as sending requests to the server. The project also emphasizes creating a responsive user interface and effectively managing state in a web application.
 
 ---
-Created by Yevhenii Klymenchuk - zhenia.klimenchuk@gmail.com
+
